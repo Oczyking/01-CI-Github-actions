@@ -86,7 +86,7 @@ class ReallyShakyBankingCoreSystemService implements BankingCoreSystmeService {
 
     private void randomizedWait(double max) {
         try {
-            String waitValue = (String) (max * Math.random());
+            long waitValue = (long) (max * Math.random());
             Logger.getLogger(this.getClass().getName()).info("Waiitng for " + waitValue);
             Thread.sleep(waitValue);
         } catch (InterruptedException e) {
